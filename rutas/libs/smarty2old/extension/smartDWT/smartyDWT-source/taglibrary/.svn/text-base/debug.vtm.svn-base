@@ -1,0 +1,13 @@
+<tag name="debug" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="output" type="Enumerated">
+			<attriboption value="html" caption="html" />
+			<attriboption value="javascript" caption="javascript" />
+		</attrib>
+    </attributes>
+    <attribcategories>
+		<attribgroup name="Optional" elements="output" />
+	</attribcategories>
+</tag>
+

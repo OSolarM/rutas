@@ -1,0 +1,16 @@
+<tag name="html_image" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="file" type="Relativepath" />
+        <attrib name="height" />
+        <attrib name="width" />
+        <attrib name="basedir" />
+        <attrib name="alt" />
+        <attrib name="href" type="Relativepath" />
+    </attributes>
+     <attribcategories>
+		<attribgroup name="Required" elements="file" />
+		<attribgroup name="Optional" elements="height,width,basedir,alt,href" />
+	</attribcategories>
+</tag>
+

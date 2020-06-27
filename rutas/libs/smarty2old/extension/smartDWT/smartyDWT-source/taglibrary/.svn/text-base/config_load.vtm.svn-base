@@ -1,0 +1,21 @@
+<tag name="config_load" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="file" type="Relativepath" />
+        <attrib name="section" />
+        <attrib name="scope" type="Enumerated">
+			<attriboption value="local" caption="local" />
+			<attriboption value="local" caption="parent" />
+			<attriboption value="local" caption="global" />
+		</attrib>
+		<attrib name="global" type="Enumerated">
+			<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+    </attributes>
+    <attribcategories>
+		<attribgroup name="Required" elements="file" />
+		<attribgroup name="Optional" elements="section,scope" />
+		<attribgroup name="Deprecated" elements="global" />
+	</attribcategories>
+</tag>

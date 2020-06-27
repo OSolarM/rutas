@@ -1,0 +1,281 @@
+<macromedia-extension name="SmartyDWT - Smarty Dreamweaver Tags Extension" version="1.3" type="Suite" requires-restart="true">
+	<products>
+		<product name="Dreamweaver" version="6" primary="true"/>
+	</products>
+	<author name="KLITSCHE.DE // DIRK ALBAN ADLER"/>
+	<license-agreement><![CDATA[
+SmartyDWT is published under the CC-GNU LGPL
+http://creativecommons.org/licenses/LGPL/2.1/
+
+(C) 2004-2005 KLITSCH.DE // DIRK ALBAN ADLER
+	]]></license-agreement>
+	<description><![CDATA[
+ 		SmartyDWT - Smarty Dreamweaver Tags Extension
+	]]></description>
+	<ui-access><![CDATA[
+Extra insert bar for smarty tags.
+Extra insert menu for smarty tags.
+Extra icons for smarty tags in design view mode.
+Extra source formatting rules for smarty tags.
+Extra document type / extension 'tpl'.
+&nbsp;
+Use SmartyDWT.php to extend Smarty class.
+&nbsp;
+For more information:
+http://smartydwt.klitsche.org
+&nbsp;
+Use it. Improve it. Let me know.
+	]]></ui-access>
+	<files>
+		<file name="insertbar/section-closed.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/section.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/sectionelse.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/sectionelse.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/if-closed.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/if.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/elseif.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/elseif.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/else.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/else.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/literal.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/literal-closed.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/php.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/php-closed.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/comment.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/comment.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/include.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/include.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/config_load.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/config_load.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/config.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/config.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/assign.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/assign.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/strip.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/strip-closed.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/smarty.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/smarty.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/include_php.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/include_php.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/capture.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/capture-closed.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/insert.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/insert.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/foreach.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/foreach-closed.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/foreachelse.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/foreachelse.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/variable.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/variable.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/smarty.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/smarty.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/textformat.htm" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/textformat-closed.png" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="insertbar/smarty.xml" destination="$dreamweaver/Configuration/ThirdPartyTags"/>
+		<file name="insertbar/assign.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/capture.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/capture-end.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/comment.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/config.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/config_load.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/if.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/else.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/elseif.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/if-end.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/foreachelse.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/foreach.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/foreach-end.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/sectionelse.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/section.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/section-end.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/include_php.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/include.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/insert.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/php.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/php-end.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/literal.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/literal-end.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/strip.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/strip-end.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/smarty.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/variable.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/textformat.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/textformat-end.png" destination="$dreamweaver/Configuration/ThirdPartyTags/SmartyDWT"/>
+		<file name="insertbar/_folderinfo.txt" destination="$dreamweaver/Configuration/Objects/SmartyDWT"/>
+		<file name="taglibrary/smarty.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/capture.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/config_load.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/foreach.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/foreachelse.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/if.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/else.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/elseif.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/section.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/include.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/include_php.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/php.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/literal.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/insert.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/ldelim.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/rdelim.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/sectionelse.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/strip.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/assign.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/cycle.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/counter.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/debug.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/eval.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/fetch.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/html_checkboxes.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/html_image.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/html_options.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/html_radios.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/html_select_date.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/html_select_time.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/html_table.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/math.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/mailto.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/popup_init.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/popup.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/textformat.vtm" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="taglibrary/TagChooser.xml" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+		<file name="insertbar/smarty.png" destination="$dreamweaver/Configuration/TagLibraries/SmartyDWT"/>
+	</files>
+	<configuration-changes>
+		<menu-insert insertBefore="DWMenu_Insert_Table">
+			<menu id="DWMenu_Insert_SmartyDWT" name="_SmartyDWT"/>
+			<separator/>
+		</menu-insert>
+		<menu-insert appendTo="DWMenu_Insert_SmartyDWT">
+			<menuitem id="DWMenu_Insert_SmartyDWT_section" name="section" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="SmartyDWT/section.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_sectionelse" name="sectionelse" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="sectionelse.htm"/>
+			<separator/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_if" name="if" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="if.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_else" name="else" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="else.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_elseif" name="elseif" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="elseif.htm"/>
+			<separator/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_foreach" name="foreach" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="foreach.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_foreachelse" name="foreachelse" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="foreachelse.htm"/>
+			<separator/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_capture" name="capture" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="capture.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_literal" name="literal" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="literal.htm"/>
+			<separator/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_variable" name="variable" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="variable.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_assign" name="assign" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="assign.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_config_load" name="config_load" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="config_load.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_config" name="config variable" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="config.htm"/>
+			<separator/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_strip" name="strip" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="strip.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_textformat" name="textformat" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="textformat.htm"/>
+			<separator/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_insert" name="insert" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="insert.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_include" name="include" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="include.htm"/>
+			<separator/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_php" name="php" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="php.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_include_php" name="include_php" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="include_php.htm"/>
+			<separator/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_comment" name="comment" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="comment.htm"/>
+			<menuitem id="DWMenu_Insert_SmartyDWT_emptytag" name="empty tag" enabled="(dw.getFocus() != 'browser') &amp;&amp; (dw.getDocumentDOM() != null &amp;&amp; dw.getDocumentDOM().getParseMode() == 'html')" file="smarty.htm"/>
+		</menu-insert>
+		<insertbar-changes>
+			<insertbar-insert>
+				<category id="DWInsertbar_SmartyDWT" folder="SmartyDWT" name="SmartyDWT"/>
+			</insertbar-insert>
+			<insertbar-remove id="DWInsertbar_SmartyDWT"/>
+			<insertbar-insert>
+				<category id="DWInsertbar_SmartyDWT" folder="SmartyDWT" name="SmartyDWT">
+					<button id="DWInsertbar_SmartyDWT_section" image="SmartyDWT/section-closed.png" name="SmartyDWT: section" enabled="" showIf="" file="SmartyDWT/section.htm"/>
+					<button id="DWInsertbar_SmartyDWT_sectionelse" image="SmartyDWT/sectionelse.png" name="SmartyDWT: sectionelse" enabled="" showIf="" file="SmartyDWT/sectionelse.htm"/>
+					<separator/>
+					<button id="DWInsertbar_SmartyDWT_if" image="SmartyDWT/if-closed.png" name="SmartyDWT: if" enabled="" showIf="" file="SmartyDWT/if.htm"/>
+					<button id="DWInsertbar_SmartyDWT_else" image="SmartyDWT/else.png" name="SmartyDWT: else" enabled="" showIf="" file="SmartyDWT/else.htm"/>
+					<button id="DWInsertbar_SmartyDWT_elseif" image="SmartyDWT/elseif.png" name="SmartyDWT: elseif" enabled="" showIf="" file="SmartyDWT/elseif.htm"/>
+					<separator/>
+					<button id="DWInsertbar_SmartyDWT_foreach" image="SmartyDWT/foreach-closed.png" name="SmartyDWT: foreach" enabled="" showIf="" file="SmartyDWT/foreach.htm"/>
+					<button id="DWInsertbar_SmartyDWT_foreachelse" image="SmartyDWT/foreachelse.png" name="SmartyDWT: foreachelse" enabled="" showIf="" file="SmartyDWT/foreachelse.htm"/>
+					<separator/>
+					<button id="DWInsertbar_SmartyDWT_capture" image="SmartyDWT/capture-closed.png" name="SmartyDWT: capture" enabled="" showIf="" file="SmartyDWT/capture.htm"/>
+					<button id="DWInsertbar_SmartyDWT_literal" image="SmartyDWT/literal-closed.png" name="SmartyDWT: literal" enabled="" showIf="" file="SmartyDWT/literal.htm"/>
+					<separator/>
+					<button id="DWInsertbar_SmartyDWT_variable" image="SmartyDWT/variable.png" name="SmartyDWT: variable" enabled="" showIf="" file="SmartyDWT/variable.htm"/>
+					<button id="DWInsertbar_SmartyDWT_assign" image="SmartyDWT/assign.png" name="SmartyDWT: assign" enabled="" showIf="" file="SmartyDWT/assign.htm"/>
+					<button id="DWInsertbar_SmartyDWT_config_load" image="SmartyDWT/config_load.png" name="SmartyDWT: config_load" enabled="" showIf="" file="SmartyDWT/config_load.htm"/>
+					<button id="DWInsertbar_SmartyDWT_config" image="SmartyDWT/config.png" name="SmartyDWT: config variable" enabled="" showIf="" file="SmartyDWT/config.htm"/>
+					<separator/>
+					<button id="DWInsertbar_SmartyDWT_strip" image="SmartyDWT/strip-closed.png" name="SmartyDWT: strip" enabled="" showIf="" file="SmartyDWT/strip.htm"/>
+					<button id="DWInsertbar_SmartyDWT_textformat" image="SmartyDWT/textformat-closed.png" name="SmartyDWT: textformat" enabled="" showIf="" file="SmartyDWT/textformat.htm"/>
+					<separator/>
+					<button id="DWInsertbar_SmartyDWT_insert" image="SmartyDWT/insert.png" name="SmartyDWT: insert" enabled="" showIf="" file="SmartyDWT/insert.htm"/>
+					<button id="DWInsertbar_SmartyDWT_include" image="SmartyDWT/include.png" name="SmartyDWT: include" enabled="" showIf="" file="SmartyDWT/include.htm"/>
+					<separator/>
+					<button id="DWInsertbar_SmartyDWT_php" image="SmartyDWT/php-closed.png" name="PHP" enabled="" showIf="" file="SmartyDWT/php.htm"/>
+					<button id="DWInsertbar_SmartyDWT_include_php" image="SmartyDWT/include_php.png" name="SmartyDWT: include_php" enabled="" showIf="" file="SmartyDWT/include_php.htm"/>
+					<separator/>
+					<button id="DWInsertbar_SmartyDWT_comment" image="SmartyDWT/comment.png" name="SmartyDWT: comment" enabled="" showIf="" file="SmartyDWT/comment.htm"/>
+					<button id="DWInsertbar_SmartyDWT_emptytag" image="SmartyDWT/smarty.png" name="SmartyDWT: empty tag" enabled="" showIf="" file="SmartyDWT/smarty.htm"/>
+				</category>
+			</insertbar-insert>
+		</insertbar-changes>
+		<taglibrary-changes>
+			<taglibrary-insert>
+				<taglibrary name="SmartyDWT" tagchooser="SmartyDWT/TagChooser.xml" doctypes="ASP-JS,ASP-VB,HTML,DWTemplate,LibraryItem,PHP_MySQL,JavaScript,Text,VBScript,WML,XML" id="DWTagLibrary_SmartyDWT"/>
+			</taglibrary-insert>
+			<taglibrary-remove id="DWTagLibrary_SmartyDWT"/>
+			<taglibrary-insert>
+				<taglibrary name="SmartyDWT" tagchooser="SmartyDWT/TagChooser.xml" doctypes="ASP-JS,ASP-VB,HTML,DWTemplate,LibraryItem,PHP_MySQL,JavaScript,Text,VBScript,WML,XML" id="DWTagLibrary_SmartyDWT">
+					<tagref prefix="&lt;?" name="SmartyDWT" file="SmartyDWT/smarty.vtm"/>
+					<tagref prefix="&lt;?" name="capture" file="SmartyDWT/capture.vtm"/>
+					<tagref prefix="&lt;?" name="config_load" file="SmartyDWT/config_load.vtm"/>
+					<tagref prefix="&lt;?" name="foreach" file="SmartyDWT/foreach.vtm"/>
+					<tagref prefix="&lt;?" name="foreachelse" file="SmartyDWT/foreachelse.vtm"/>
+					<tagref prefix="&lt;?" name="if" file="SmartyDWT/if.vtm"/>
+					<tagref prefix="&lt;?" name="else" file="SmartyDWT/else.vtm"/>
+					<tagref prefix="&lt;?" name="elseif" file="SmartyDWT/elseif.vtm"/>
+					<tagref prefix="&lt;?" name="section" file="SmartyDWT/section.vtm"/>
+					<tagref prefix="&lt;?" name="include" file="SmartyDWT/include.vtm"/>
+					<tagref prefix="&lt;?" name="include_php" file="SmartyDWT/include_php.vtm"/>
+					<tagref prefix="&lt;?" name="php" file="SmartyDWT/php.vtm"/>
+					<tagref prefix="&lt;?" name="literal" file="SmartyDWT/literal.vtm"/>
+					<tagref prefix="&lt;?" name="insert" file="SmartyDWT/insert.vtm"/>
+					<tagref prefix="&lt;?" name="ldelim" file="SmartyDWT/ldelim.vtm"/>
+					<tagref prefix="&lt;?" name="rdelim" file="SmartyDWT/rdelim.vtm"/>
+					<tagref prefix="&lt;?" name="sectionelse" file="SmartyDWT/sectionelse.vtm"/>
+					<tagref prefix="&lt;?" name="strip" file="SmartyDWT/strip.vtm"/>
+					<tagref prefix="&lt;?" name="assign" file="SmartyDWT/assign.vtm"/>
+					<tagref prefix="&lt;?" name="cycle" file="SmartyDWT/cycle.vtm"/>
+					<tagref prefix="&lt;?" name="counter" file="SmartyDWT/counter.vtm"/>
+					<tagref prefix="&lt;?" name="debug" file="SmartyDWT/debug.vtm"/>
+					<tagref prefix="&lt;?" name="eval" file="SmartyDWT/eval.vtm"/>
+					<tagref prefix="&lt;?" name="fetch" file="SmartyDWT/fetch.vtm"/>
+					<tagref prefix="&lt;?" name="html_checkboxes" file="SmartyDWT/html_checkboxes.vtm"/>
+					<tagref prefix="&lt;?" name="html_image" file="SmartyDWT/html_image.vtm"/>
+					<tagref prefix="&lt;?" name="html_options" file="SmartyDWT/html_options.vtm"/>
+					<tagref prefix="&lt;?" name="html_radios" file="SmartyDWT/html_radios.vtm"/>
+					<tagref prefix="&lt;?" name="html_select_date" file="SmartyDWT/html_select_date.vtm"/>
+					<tagref prefix="&lt;?" name="html_select_time" file="SmartyDWT/html_select_time.vtm"/>
+					<tagref prefix="&lt;?" name="html_table" file="SmartyDWT/html_table.vtm"/>
+					<tagref prefix="&lt;?" name="math" file="SmartyDWT/math.vtm"/>
+					<tagref prefix="&lt;?" name="mailto" file="SmartyDWT/mailto.vtm"/>
+					<tagref prefix="&lt;?" name="popup_init" file="SmartyDWT/popup_init.vtm"/>
+					<tagref prefix="&lt;?" name="popup" file="SmartyDWT/popup.vtm"/>
+					<tagref prefix="&lt;?" name="textformat" file="SmartyDWT/textformat.vtm"/>
+				</taglibrary>
+			</taglibrary-insert>
+		</taglibrary-changes>
+		<!-- documenttype-changes>
+			<documenttype-insert>
+				<documenttype id="DWDocType_SmartyTemplate" internaltype="HTML" winfileextension="tpl" macfileextension="tpl">
+					<title>
+		      Smarty Template
+		    </title>
+					<description>
+		      Smarty Template File
+		    </description>
+				</documenttype>
+			</documenttype-insert>
+		</documenttype-changes>
+		<extensions-changes>
+			<extension-insert extension="tpl" description="Smarty Template File"/>
+		</extensions-changes -->
+	</configuration-changes>
+</macromedia-extension>

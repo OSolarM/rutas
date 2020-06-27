@@ -1,0 +1,337 @@
+<?php
+   class AppModel extends Model {	   
+	  var $sqlcode    = 0;
+      var $sqlerrm    = null;      
+      var $package    = "pa_mant_tablas_cod";
+       
+	  function AppModel() {
+	  }
+	        
+      function findAll($condition=null, $fieldList=null, $orderBy=null, $offset=0, $nRows=0) {	     
+	     $dbo = new DBOracle();
+	     
+         $db  = $dbo->getConn();
+         
+         $stmt = $db->PrepareSP("BEGIN ".$this->package.".exec_sql_curr(:a1, :refc, :a2, :a3); END;");
+         
+         $lista="";
+         
+         foreach($this->getFieldList() as $c) {
+	        if ($lista != "") $lista .= ",";
+	        
+	        if ($this->dataTypes[$c] == "D") 
+		       $lista .= "to_char($c, 'dd/mm/yyyy') $c";	        
+	        else  
+	           $lista .= $c;
+         }
+                  
+         $input = "select $lista from $this->useTable";
+                  
+         if ($condition !=null)
+            $input .= " where ".$condition;
+            
+         if ($orderBy != null)
+            $input .= " order by ".$orderBy;
+            
+         //echo $input;
+                  
+         if ($offset > 0) {
+	        $Desde = $offset;
+	        $Hasta = $Desde + $nRows - 1;
+	        
+	        $input = "select * ".
+	                 "from (select rownum as fila, consulta.* ".
+	                 "      from ($input) consulta ".
+	                 "     ) ".
+                     "where fila >= $Desde and fila <= $Hasta ";
+         }             
+            
+         $db->InParameter($stmt,$input,'a1');
+         
+         $db->OutParameter($stmt,$sqlcode,'a2');
+         $db->OutParameter($stmt,$sqlerrm,'a3');
+         
+         $rs = $db->ExecuteCursor($stmt,'refc');       
+
+         $myArr=array();
+         while ($arr = $rs->FetchRow()) {
+            $marr=array();
+
+            foreach($arr as $key => $value) 
+               $marr[strtolower($key)] = $value;
+
+            $myArr[] = $marr;
+         }
+
+         return $myArr; 
+	      
+      }//findAll
+      
+      function findByPk($id) {
+         $dbo = new DBOracle();
+         $db  = $dbo->getConn();
+         
+         $stmt = $db->PrepareSP("BEGIN ".$this->package.".exec_sql_curr(:a1, :refc, :a2, :a3); END;");
+         
+         $id = str_replace("\"", "", $id);
+         
+         $lista="";
+         
+         foreach($this->getFieldList() as $c) {
+	        if ($lista != "") $lista .= ",";
+	        
+	        if ($this->dataTypes[$c] == "D") 
+		       $lista .= "to_char($c, 'dd/mm/yyyy') $c";	        
+	        else  
+	           $lista .= $c;
+         }
+         
+         $input = "select $lista from $this->useTable where $this->primaryKey=$id";
+         
+         $db->InParameter($stmt,$input,'a1');
+         
+         $db->OutParameter($stmt,$sqlcode,'a2');
+         $db->OutParameter($stmt,$sqlerrm,'a3');
+         
+         $this->sqlcode = $sqlcode;
+         $this->sqlerrm = $sqlerrm;
+                  
+         $rs = $db->ExecuteCursor($stmt,'refc');       
+
+         $this->data=array();
+         while ($arr = $rs->FetchRow()) {
+            $marr=array();
+
+            foreach($arr as $key => $value) 
+               $marr[strtolower($key)] = $value;
+
+            $this->data[$this->name] = $marr;
+         }
+
+         if (count($this->data) > 0)
+            return true;
+         else
+            return false;	      
+      }
+      
+      function insert() {
+	     $dbo = new DBOracle();
+         $db  = $dbo->getConn(); 
+	     
+	     $stmt = $db->PrepareSP("BEGIN ".$this->package.".exec_sql(:a1, :a2, :a3); END;");
+        
+	     $lCampos="";
+	     foreach($this->getFieldList() as $field) {
+		    if ($lCampos !="") $lCampos .= ", ";
+		    
+		    $lCampos .= $field;
+	     }
+	     
+	     $lista="";
+	     foreach($this->getFieldList() as $field) {
+		    if ($lista !="") $lista .=", ";
+		    
+	        if ($field==$this->primaryKey)
+	           $lista .= $this->useSeq.".NextVal";
+	        else {
+		       $valor = $this->data[$this->name][$field]; 
+		       switch($this->dataTypes[$field]) {
+			      case "N" : $lista .= $valor; break;
+			      
+			      case "C" : $lista .= stripslashes($db->qstr($valor)); break;
+			      
+			      case "D" : $lista .= "to_date('".$valor."','dd/mm/yyyy')"; break;
+		       }
+	        }
+         }
+         
+         $sql = "insert into $this->useTable ($lCampos) values ($lista)";
+        
+		
+	     $db->InParameter($stmt,$sql,'a1');
+         
+         $db->OutParameter($stmt,$sqlcode,'a2');
+         $db->OutParameter($stmt,$sqlerrm,'a3');
+         
+         $ok = $db->Execute($stmt); 
+         
+         $this->sqlcode = $sqlcode;
+         $this->sqlerrm = $sqlerrm;
+         
+         if ($sqlcode==0) 
+            return true;
+         else
+            return false;         
+      }
+      
+      function update() {
+	     $dbo = new DBOracle();
+         $db  = $dbo->getConn(); 
+	     
+	     $stmt = $db->PrepareSP("BEGIN ".$this->package.".exec_sql(:a1, :a2, :a3); END;");
+        
+	     $lCampos="";
+	     foreach($this->getFieldList() as $field) {
+		    if ($lCampos !="") $lCampos .= ", ";
+		    
+		    $lCampos .= $field;
+	     }
+	     
+	     $lista="";
+	     foreach($this->getFieldList() as $field) {
+		    if ($lista !="") $lista .=", ";
+		    
+		    $valor = $this->data[$this->name][$field]; 
+		    
+		    echo $valor ."<hr>";
+		    switch($this->dataTypes[$field]) {
+			   case "N" : $lista .= $field."=".$valor; break;
+			   
+			   case "C" : $lista .= $field."=".stripslashes($db->qstr($valor)); break;
+			   
+			   case "D" : $lista .= $field."="."to_date('".$valor."','dd/mm/yyyy')"; break;
+		    }	        
+         }
+                  
+         $sql = "update $this->useTable set $lista where $this->primaryKey = ".$this->data[$this->name][$this->primaryKey];
+        
+         //echo $sql . "<br>";
+         
+	     $db->InParameter($stmt,$sql,'a1');
+         
+         $db->OutParameter($stmt,$sqlcode,'a2');
+         $db->OutParameter($stmt,$sqlerrm,'a3');
+         
+         $ok = $db->Execute($stmt); 
+         
+         $this->sqlcode = $sqlcode;
+         $this->sqlerrm = $sqlerrm;
+         
+         if ($sqlcode==0) 
+            return true;
+         else
+            return false;         	      
+      }
+      
+      function delete() {
+	     $dbo = new DBOracle();
+         $db  = $dbo->getConn(); 
+	     
+	     $stmt = $db->PrepareSP("BEGIN ".$this->package.".exec_sql(:a1, :a2, :a3); END;");
+        
+         
+         $sql = "delete from $this->useTable where $this->primaryKey=".$this->data[$this->name][$this->primaryKey];
+        
+	     $db->InParameter($stmt,$sql,'a1');
+         
+         $db->OutParameter($stmt,$sqlcode,'a2');
+         $db->OutParameter($stmt,$sqlerrm,'a3');
+         
+         $ok = $db->Execute($stmt); 
+         
+         $this->sqlcode = $sqlcode;
+         $this->sqlerrm = $sqlerrm;
+         
+         if ($sqlcode==0) 
+            return true;
+         else
+            return false;         	      
+      }
+      
+      function count($condition=null, $orderBy=null) {
+         $dbo = new DBOracle();
+	     
+         $db  = $dbo->getConn();
+         
+         $stmt = $db->PrepareSP("BEGIN ".$this->package.".exec_sql_curr(:a1, :refc, :a2, :a3); END;");
+         
+         $input = "select count(*) cuenta from $this->useTable";
+         
+         if ($condition !=null)
+            $input .= " where ".$condition;
+            
+         if ($orderBy != null)
+            $input .= " order by ".$orderBy;
+            
+         $db->InParameter($stmt,$input,'a1');
+         
+         $db->OutParameter($stmt,$sqlcode,'a2');
+         $db->OutParameter($stmt,$sqlerrm,'a3');
+         
+         $rs = $db->ExecuteCursor($stmt,'refc');     
+         
+         $arr = $rs->FetchRow();
+                  
+         if (count($arr) > 0)
+            return $arr["CUENTA"];
+         else
+            return 0;
+      }
+      
+      function get() {
+      }
+      
+      function set() {
+      }      
+      
+      public function __call($function, $args) {
+        if (!(strpos(strtolower($function), "findby")===false)) {
+          $function = strtolower($function);
+                      
+          $field = str_replace("findby", "", $function);
+          
+          //Busco el campo en el modelo
+          $fields = $this->getFieldList();
+          $hallado = false;
+          foreach($fields as $f) {
+             if ($f==$field) {
+                $hallado = true;
+                break;
+             }
+          }
+                      
+          if (!$hallado) {
+             print "El campo '$field', no existe en el modelo '$this->model'<hr>";
+             return;
+            }
+            
+            //Busco el campo $field en la estructura de la tabla base
+            //foreach($this->tbl->fields as $f) 
+            // if ($f->name==$field) {
+            //    $fld = $f;
+            //    break;
+            // }
+            
+            switch($this->dataTypes[$field]) {
+             case "N": $valor = $args[0]; break;
+             case "C": $valor = "'".$args[0]."'"; break;
+             case "D": $valor = "to_date('".$args[0]."','dd/mm/yyyy')"; break;
+             default : $valor = "null"; break;
+            }
+            
+            $r = $this->findAll("$field=$valor");
+            
+            if (!empty($r)) {
+             $this->data = array();
+             
+             $r = $r[0];
+             
+             foreach($r as $key => $val) 
+                $this->data[$this->name][$key] = $val;
+                
+             //print_r($this->data);
+                
+             return true; 
+            }
+            else
+               return false;
+         
+         }
+         else {     
+            $args = implode(', ', $args);
+            print "Call to undefined $function() with args '$args' failed!\n";
+        }	      
+      }
+	  
+   }
+?>   

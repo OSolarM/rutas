@@ -1,0 +1,53 @@
+8
+
+dir
+71
+svn://svn.tie/tie/libs/smarty/misc
+svn://svn.tie
+
+
+
+2008-06-17T21:50:13.349687Z
+21
+osolar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+573d853f-ea1c-427f-91f2-8fda92727b7d
+
+smarty_icon.README
+file
+
+
+
+
+2008-06-17T21:51:45.000000Z
+24279e1d48315bb4974da55ef0afebf0
+2008-06-17T21:50:13.349687Z
+21
+osolar
+
+smarty_icon.gif
+file
+
+
+
+
+2008-06-17T21:51:45.000000Z
+3c85036451eaea0037f5343f28dc4d74
+2008-06-17T21:50:13.349687Z
+21
+osolar
+has-props
+

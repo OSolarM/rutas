@@ -1,0 +1,12 @@
+<tag name="eval" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="var" />
+        <attrib name="assign" />
+    </attributes>
+     <attribcategories>
+		<attribgroup name="Required" elements="condition" />
+		<attribgroup name="Optional" elements="assign" />
+	</attribcategories>
+</tag>
+

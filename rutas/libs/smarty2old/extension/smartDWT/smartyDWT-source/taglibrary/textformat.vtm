@@ -1,0 +1,6 @@
+<tag name="textformat" endtag="yes" tagtype="nonempty" casesensitive="yes">
+    <tagformat nlbeforetag="1" nlaftertag="1" nlbeforecontents="1" nlaftercontents="1" />
+    <attributes>
+        <attrib name="value" casesensitive="yes"/>
+    </attributes>
+</tag>

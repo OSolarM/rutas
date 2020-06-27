@@ -1,0 +1,7 @@
+<tag name="math" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="value" casesensitive="yes"/>
+    </attributes>
+</tag>
+

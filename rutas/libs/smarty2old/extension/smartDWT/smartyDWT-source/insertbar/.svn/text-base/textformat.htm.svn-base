@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>SmartyDWT: textformat</title>
+<script language="javascript">
+function isDOMRequired ()
+{
+	return true;
+}
+
+function objectTag ()
+{
+	var startTag = "<?smarty:textformat ?>\n";
+	var endTag = "\n<?smarty:/textformat?>";
+	var dom = dw.getDocumentDOM ();
+	dom.source.wrapSelection (startTag, endTag);
+	dom.synchronizeDocument();
+	return "";
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

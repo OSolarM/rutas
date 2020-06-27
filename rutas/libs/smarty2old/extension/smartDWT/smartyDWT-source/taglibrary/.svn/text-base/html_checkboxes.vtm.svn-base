@@ -1,0 +1,21 @@
+<tag name="html_checkboxes" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="name" type="Enumerated">
+			<attriboption value="checkbox" caption="checkbox" />
+		</attrib>
+        <attrib name="values" />
+        <attrib name="output" />
+        <attrib name="selected" />
+        <attrib name="options" />
+        <attrib name="seperator" />
+        <attrib name="labels" type="Enumerated">
+			<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+    </attributes>
+     <attribcategories>
+		<attribgroup name="Optional" elements="name,output,selected,options,seperator" />
+	</attribcategories>
+</tag>
+

@@ -1,0 +1,40 @@
+<tag name="html_select_time" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="prefix" type="Enumerated">
+			<attriboption value="Time_" caption="Time_" />
+		</attrib>
+        <attrib name="time" />
+        <attrib name="display_hours" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="display_minutes" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+		<attrib name="display_seconds" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+		<attrib name="display_meridian" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+		<attrib name="use_24_hours" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="minute_interval" />
+        <attrib name="second_interval" />
+        <attrib name="field_array" />
+        <attrib name="hour_extra" />
+        <attrib name="minute_extra" />
+        <attrib name="second_extra" />
+        <attrib name="meridian_extra" />
+    </attributes>
+     <attribcategories>
+		<attribgroup name="Optional" elements="prefix,time,display_hours,display_minutes,display_seconds,display_meridian,use_24_hours,minute_interval,second_interval,field_array,hour_extra,minute_extra,second_extra,meridian_extra" />
+	</attribcategories>
+</tag>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<tclibrary name="Smarty" desc="A collection of Smarty Template Engine Tags" reference="STET">
+  <category name="General Tag" icon="smarty.png">
+	<element name="smarty"				value="&lt;?smarty?&gt;"						reference="STET,SMARTY"/>
+  </category>
+  <category name="Built-in Functions" icon="smarty.png">
+	<element name="capture"				value="&lt;capture&lt;&gt;/capture&gt;"			reference="STET,CAPTURE"/>
+	<element name="config_load"			value="&lt;config_load?&gt;"					reference="STET,CONFIG_LOAD"/>
+	<element name="foreach"				value="&lt;foreach&lt;&gt;/capture&gt;"			reference="STET,FOREACH"/>
+	<element name="foreachelse"			value="&lt;foreachelse&gt;"						reference="STET,FOREACHELSE"/>
+	<element name="include"				value="&lt;include?&gt;"						reference="STET,INCLUDE"/>
+	<element name="include_php"			value="&lt;include_php?&gt;"					reference="STET,INCLUDE_PHP"/>
+	<element name="insert"				value="&lt;insert?&gt;"							reference="STET,INSERT"/>
+	<element name="if"					value="&lt;if&lt;&gt;/if&gt;"					reference="STET,IF"/>
+	<element name="elseif"				value="&lt;elseif?&gt;"							reference="STET,ELSEIF"/>
+	<element name="else"				value="&lt;else&gt;"							reference="STET,ELSE"/>
+	<element name="ldelim"				value="&lt;ldelim&gt;"							reference="STET,LDELIM"/>
+	<element name="rdelim"				value="&lt;rdelim&gt;"							reference="STET,RDELIM"/>
+	<element name="literal"				value="&lt;literal&lt;&gt;/capture&gt;"			reference="STET,LITERAL"/>
+	<element name="php"					value="&lt;php&lt;&gt;/php&gt;"					reference="STET,PHP"/>
+	<element name="section"				value="&lt;section&lt;&gt;/section&gt;"			reference="STET,SECTION"/>
+	<element name="sectionelse"			value="&lt;sectionelse&gt;"						reference="STET,SECTIONELSE"/>
+	<element name="strip"				value="&lt;strip&lt;&gt;/strip&gt;"				reference="STET,STRIP"/>
+  </category>
+  <category name="Custom Functions" icon="smarty.png">
+	<element name="assign"				value="&lt;assign?&gt;"							reference="STET,ASSIGN"/>
+	<element name="counter"				value="&lt;counter?&gt;"						reference="STET,COUNTER"/>
+	<element name="cycle"				value="&lt;cycle?&gt;"							reference="STET,CYCLE"/>
+	<element name="debug"				value="&lt;debug?&gt;"							reference="STET,DEBUG"/>
+	<element name="eval"				value="&lt;eval?&gt;"							reference="STET,EVAL"/>
+	<element name="fetch"				value="&lt;fetch?&gt;"							reference="STET,FETCH"/>
+	<element name="html_checkboxes"		value="&lt;html_checkboxes?&gt;"				reference="STET,HTML_CHECKBOXES"/>
+	<element name="html_image"			value="&lt;html_image?&gt;"						reference="STET,HTML_IMAGE"/>
+	<element name="html_options"		value="&lt;html_options?&gt;"					reference="STET,HTML_OPTIONS"/>
+	<element name="html_radios"			value="&lt;html_radios?&gt;"					reference="STET,HTML_RADIOS"/>
+	<element name="html_select_date"	value="&lt;html_select_date?&gt;"				reference="STET,HTML_SELECT_DATE"/>
+	<element name="html_select_time"	value="&lt;html_select_time?&gt;"				reference="STET,HTML_SELECT_TIME"/>
+	<element name="html_table"			value="&lt;html_table?&gt;"						reference="STET,HTML_TABLE"/>
+	<element name="math"				value="&lt;math?&gt;"							reference="STET,MATH"/>
+	<element name="mailto"				value="&lt;mailto?&gt;"							reference="STET,MAILTO"/>
+	<element name="popup_init"			value="&lt;popup_init?&gt;"						reference="STET,POPUP_INIT"/>
+	<element name="popup"				value="&lt;popup?&gt;"							reference="STET,POPUP"/>
+	<element name="textformat"			value="&lt;textformat&lt;&gt;/textformat&gt;"	reference="STET,TEXTFORMAT"/>
+  </category>
+</tclibrary>
+
+

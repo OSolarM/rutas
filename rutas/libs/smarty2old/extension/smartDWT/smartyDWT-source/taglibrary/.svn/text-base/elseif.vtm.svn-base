@@ -1,0 +1,9 @@
+<tag name="elseif" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="1" nlaftertag="1" />
+    <attributes>
+        <attrib name="condition"/>
+    </attributes>
+     <attribcategories>
+		<attribgroup name="Required" elements="condition" />
+	</attribcategories>
+</tag>

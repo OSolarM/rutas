@@ -1,0 +1,157 @@
+<?php
+   function isDigit($c) {
+      return ($c >= "0" && $c <= "9");
+   }
+
+   function isInteger($val) {
+      if (empty($val)) return true;
+
+      $s = $val."@";
+      $i = 0;
+
+      if ($s[$i]=="+" || $s[$i]=="-")
+         $i++;
+
+      while (isDigit($s[$i])) $i++;
+
+      return ($s[$i]=="@");
+   }//isInteger
+
+   function isNumber($val) {
+      if (empty($val)) return true;
+
+      $s = $val."@";
+      $i = 0;
+
+      if ($s[$i]=="+" || $s[$i]=="-")
+         $i++;
+
+      while (isDigit($s[$i])) $i++;
+
+      if ($s[$i]==".") $i++;
+
+      while (isDigit($s[$i])) $i++;
+
+      return ($s[$i]=="@");
+   }//isNumber
+
+   function isDate($val) {
+      if (empty($val)) return true;
+
+      if (strlen($val)!=10) return false;
+
+      $dia = substr($val, 0, 2);
+      $mes = substr($val, 3, 2);
+      $agno= substr($val, 6, 4);
+
+      if (!isInteger($dia)) return false;
+
+      if (!isInteger($mes)) return false;
+
+      if (!isInteger($agno)) return false;
+
+      return checkdate($mes, $dia, $agno);
+   }//isDate
+   
+   function isEMail($email){
+      $qtext = '[^\\x0d\\x22\\x5c\\x80-\\xff]';
+      $dtext = '[^\\x0d\\x5b-\\x5d\\x80-\\xff]';
+      $atom = '[^\\x00-\\x20\\x22\\x28\\x29\\x2c\\x2e\\x3a-\\x3c'.
+          '\\x3e\\x40\\x5b-\\x5d\\x7f-\\xff]+';
+      $quoted_pair = '\\x5c[\\x00-\\x7f]';
+      $domain_literal = "\\x5b($dtext|$quoted_pair)*\\x5d";
+      $quoted_string = "\\x22($qtext|$quoted_pair)*\\x22";
+      $domain_ref = $atom;
+      $sub_domain = "($domain_ref|$domain_literal)";
+      $word = "($atom|$quoted_string)";
+      $domain = "$sub_domain(\\x2e$sub_domain)*";
+      $local_part = "$word(\\x2e$word)*";
+      $addr_spec = "$local_part\\x40$domain";
+      return preg_match("!^$addr_spec$!", $email) ? 1 : 0;
+   }//isEMail   
+
+   /**
+   * Verifica que el rut ingresado sea v&aacute;lido
+   * Debe estar en formato xxxxxxxx-x
+   * @return bool
+   */
+   function isRut($sUsr) {
+      if (empty($sUsr))
+         return true;
+
+      if (!preg_match("/(\d{7,8})-([\dK])/", strtoupper($sUsr), $aMatch)) {
+         return false;
+      }
+
+      $sRutBase = substr(strrev($aMatch[1]) , 0, 8 );
+      $sCodigoVerificador = $aMatch[2];
+      $iCont = 2;
+      $iSuma = 0;
+      for ($i=0; $i < strlen($sRutBase); $i++) {
+         if ($iCont>7) {
+            $iCont = 2;
+         }
+         $iSuma+= ($sRutBase{$i}) *$iCont;
+         $iCont++;
+      }
+      $iDigito = 11-($iSuma%11);
+      $sCaracter = substr("-123456789K0", $iDigito, 1);
+      return ($sCaracter == $sCodigoVerificador);
+   }
+   
+   function mysql2Date($d) {
+       if (trim($d)=="")
+          return "";
+                       
+       return substr($d, 8, 2)."/".substr($d, 5, 2)."/".substr($d, 0, 4);      
+   }//mysql2Date
+   
+   function date2Mysql($d) {
+       if (trim($d)=="")
+          return "";
+        
+       return substr($d, 6, 4)."-".substr($d, 3, 2)."-".substr($d, 0, 2);      
+   }//date2Mysql
+   
+   function isUpperCase($cChar) {
+      return ($cChar >="A") && ($cChar <="Z");
+   }
+   
+   function _aNombreArchivo($nombreClase) {
+       
+      //echo "Entre a a _aNombreArchivo: $nombreClase<hr>";
+      $s = $nombreClase."@";
+      $myClass="";
+      
+      //echo "$s<hr>";
+      
+      $i = 0;
+      while ($s[$i] != "@") {
+         //echo "Letra posicion $i: ".$s[$i]."<hr>";
+         if (isUpperCase($s[$i])) {
+            $v = $s[$i];
+            
+            $i++;
+            while ($s[$i] !="@" && !isUpperCase($s[$i])) {
+               $v .= $s[$i];
+               
+               $i++;
+            }
+            
+            //echo $v."<hr>";
+            
+            if ($myClass !="") $myClass .= "_";
+            
+            $myClass .= strtolower($v);
+            
+            //echo "Letra posicion $i: ".$s[$i]."<hr>";
+            
+         }
+         else
+            $i++;
+      }
+      
+      //echo $myClass."<hr>";
+      return $myClass;    
+   }  
+?>

@@ -1,0 +1,24 @@
+<tag name="cycle" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="name" />
+        <attrib name="values" />
+        <attrib name="print" type="Enumerated">
+			<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="advance" type="Enumerated">
+			<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="delimiter" type="Enumerated">
+			<attriboption value="," caption="," />
+		</attrib>
+        <attrib name="assign" />
+    </attributes>
+    <attribcategories>
+		<attribgroup name="Required" elements="values" />
+		<attribgroup name="Optional" elements="name,print,advance,delimiter,assign" />
+	</attribcategories>
+</tag>
+

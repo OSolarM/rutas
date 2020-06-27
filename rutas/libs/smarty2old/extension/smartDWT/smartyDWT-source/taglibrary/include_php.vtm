@@ -1,0 +1,12 @@
+<tag name="include_php" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="file" type="Relativepath" />
+        <attrib name="once" />
+        <attrib name="assign" />
+    </attributes>
+    <attribcategories>
+		<attribgroup name="Required" elements="file" />
+		<attribgroup name="Optional" elements="once,assign" />
+	</attribcategories>
+</tag>

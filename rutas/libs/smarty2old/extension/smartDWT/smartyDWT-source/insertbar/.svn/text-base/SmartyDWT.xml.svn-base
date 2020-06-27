@@ -1,0 +1,28 @@
+<tagspec tag_name="SmartyDWT: assign" start_string="<?smarty:assign" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/assign.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: capture" start_string="<?smarty:capture" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/capture.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: /capture" start_string="<?smarty:/capture" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/capture-end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: comment" start_string="<?smarty:*" end_string="*?>" detect_in_attribute="true" icon="SmartyDWT/comment.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: config load" start_string="<?smarty:config_load" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/config_load.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: if" start_string="<?smarty:if" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/if.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: elseif" start_string="<?smarty:elseif" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/elseif.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: else" start_string="<?smarty:else" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/else.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: /if" start_string="<?smarty:/if" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/if-end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: foreachelse" start_string="<?smarty:foreachelse" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/foreachelse.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: foreach" start_string="<?smarty:foreach" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/foreach.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: /foreach" start_string="<?smarty:/foreach" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/foreach-end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: sectionelse" start_string="<?smarty:sectionelse" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/sectionelse.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: section" start_string="<?smarty:section" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/section.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: /section" start_string="<?smarty:/section" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/section-end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: include_php" start_string="<?smarty:includephp" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/includephp.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: include" start_string="<?smarty:include" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/include.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: insert" start_string="<?smarty:insert" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/insert.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: php" start_string="<?smarty:php" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/php.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: /php" start_string="<?smarty:/php" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/php-end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: literal" start_string="<?smarty:literal" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/literal.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: /literal" start_string="<?smarty:/literal" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/literal-end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: strip" start_string="<?smarty:strip" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/strip.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: /strip" start_string="<?smarty:/strip" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/strip-end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: textformat" start_string="<?smarty:textformat" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/textformat.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: /textformat" start_string="<?smarty:/textformat" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/textformat-end.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: variable" start_string="<?smarty:$" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/variable.gif" icon_width="18" icon_height="18"></tagspec>
+<tagspec tag_name="SmartyDWT: empty tag" start_string="<?smarty:" end_string="?>" detect_in_attribute="true" icon="SmartyDWT/smarty.gif" icon_width="18" icon_height="18"></tagspec>

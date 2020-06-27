@@ -1,0 +1,51 @@
+<tag name="html_select_date" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="prefix" type="Enumerated">
+			<attriboption value="Date_" caption="Date_" />
+		</attrib>
+        <attrib name="time" />
+        <attrib name="start_year" />
+        <attrib name="end_year" />
+        <attrib name="display_days" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="display_months" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+		<attrib name="display_years" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="month_format" />
+        <attrib name="day_format" />
+        <attrib name="day_value_format" />
+        <attrib name="year_as_text" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="reverse_years" type="Enumerated">
+        	<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="field_array" />
+        <attrib name="day_size" />
+        <attrib name="year_size" />
+        <attrib name="all_extra" />
+        <attrib name="day_extra" />
+        <attrib name="month_extra" />
+        <attrib name="year_extra" />
+        <attrib name="field_order" />
+        <attrib name="field_separator" />
+        <attrib name="month_value_format" />
+        <attrib name="year_empty" />
+        <attrib name="month_empty" />
+        <attrib name="day_empty" />
+    </attributes>
+     <attribcategories>
+		<attribgroup name="Optional" elements="prefix,time,start_year,end_year,display_days,display_months,display_years,month_format,day_format,day_value_format,year_as_tex,reverse_years,field_array,day_size,year_size,all_extra,day_extra,year_extra,field_order,field_separator,month_value_format,year_empty,month_empty,day_empty" />
+	</attribcategories>
+</tag>
+

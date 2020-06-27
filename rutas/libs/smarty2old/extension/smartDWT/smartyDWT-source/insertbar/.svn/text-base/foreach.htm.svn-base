@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>SmartyDWT: foreach</title>
+<script language="javascript">
+function isDOMRequired ()
+{
+	return true;
+}
+
+function objectTag ()
+{
+	var startTag = "<?smarty:foreach from= item= name= key=?>\n";
+	var endTag = "\n<?smarty:/foreach?>";
+	var dom = dw.getDocumentDOM ();
+	dom.source.wrapSelection (startTag, endTag);
+	dom.synchronizeDocument();
+	return "";
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>SmartyDWT: include_php</title>
+<script language="javascript">
+function isDOMRequired ()
+{
+	return true;
+}
+
+function objectTag ()
+{
+	var startTag = "<?smarty:include_php file=?>";
+	var dom = dw.getDocumentDOM ();
+	var sel = dom.source.getSelection ();
+	dom.source.replaceRange (sel[0], sel[1], startTag);
+	dom.synchronizeDocument();
+	return "";
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

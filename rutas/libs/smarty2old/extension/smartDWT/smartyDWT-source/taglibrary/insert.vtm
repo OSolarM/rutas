@@ -1,0 +1,12 @@
+<tag name="insert" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="name" />
+        <attrib name="assign" />
+        <attrib name="script" type="Relativepath" />
+    </attributes>
+    <attribcategories>
+		<attribgroup name="Required" elements="name" />
+		<attribgroup name="Optional" elements="assign,script" />
+	</attribcategories>
+</tag>

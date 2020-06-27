@@ -1,0 +1,18 @@
+<tag name="section" endtag="yes" tagtype="nonempty" casesensitive="yes">
+    <tagformat />
+    <attributes>
+        <attrib name="name" />
+        <attrib name="loop" />
+        <attrib name="start" />
+        <attrib name="step" />
+        <attrib name="max" />
+        <attrib name="show" type="Enumerated">
+			<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+    </attributes>
+     <attribcategories>
+		<attribgroup name="Required" elements="name,loop" />
+		<attribgroup name="Optional" elements="start,step,max,show" />
+	</attribcategories>
+</tag>

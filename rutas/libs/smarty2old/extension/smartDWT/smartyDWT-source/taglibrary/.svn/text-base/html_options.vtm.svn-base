@@ -1,0 +1,14 @@
+<tag name="html_options" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="values" />
+        <attrib name="output" />
+        <attrib name="selected" />
+        <attrib name="options" />
+        <attrib name="name" />
+    </attributes>
+     <attribcategories>
+		<attribgroup name="Optional" elements="values,output,selected,options,name" />
+	</attribcategories>
+</tag>
+

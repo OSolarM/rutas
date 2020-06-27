@@ -1,0 +1,48 @@
+<macromedia-extension name="SmartyDWT DocumentType Addon" version="1.0" type="Object" requires-restart="true">
+	<products>
+		<product name="Dreamweaver" version="6" primary="true"/>
+	</products>
+	<author name="KLITSCHE.DE // DIRK ALBAN ADLER"/>
+	<license-agreement><![CDATA[
+SmartyDWT DocumentType Addon is published under the CC-GNU LGPL
+http://creativecommons.org/licenses/LGPL/2.1/
+
+(C) 2004-2005 KLITSCH.DE // DIRK ALBAN ADLER
+	]]></license-agreement>
+	<description><![CDATA[
+ 		SmartyDWT DocumentType Addon
+	]]></description>
+	<ui-access><![CDATA[
+Extra document type 'tpl'. Access document type "Smarty Template" from File > New > General tab > Basic page category.
+&nbsp;
+For more information:
+http://smartydwt.klitsche.org
+&nbsp;
+Use it. Improve it. Let me know.
+	]]></ui-access>
+	<configuration-changes>
+		<documenttype-changes>
+			<documenttype-insert>
+				<documenttype id="DWDocType_SmartyTemplate" internaltype="HTML" winfileextension="tpl" macfileextension="tpl" file="Default.html">
+					<title>
+				      Smarty Template
+				    </title>
+					<description>
+				      Smarty Template Files
+				    </description>
+				</documenttype>
+			</documenttype-insert>
+			<documenttype-remove id="DWDocType_SmartyTemplate"/>
+			<documenttype-insert>
+				<documenttype id="DWDocType_SmartyTemplate" internaltype="HTML" winfileextension="tpl" macfileextension="tpl" file="Default.html">
+					<title>
+				      Smarty Template
+				    </title>
+					<description>
+				      Smarty Template Files
+				    </description>
+				</documenttype>
+			</documenttype-insert>
+		</documenttype-changes>
+	</configuration-changes>
+</macromedia-extension>

@@ -1,0 +1,30 @@
+<tag name="html_table" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="loop" />
+        <attrib name="cols" />
+        <attrib name="rows" />
+        <attrib name="inner" />
+        <attrib name="table_attr" type="Enumerated">
+			<attriboption value="border='1'" caption="border='1'" />
+		</attrib>
+        <attrib name="tr_attr" />
+        <attrib name="td_attr" />
+        <attrib name="trailpad" type="Enumerated">
+			<attriboption value="&nbsp;" caption="&nbsp;" />
+		</attrib>
+        <attrib name="hdir" type="Enumerated">
+        	<attriboption value="right" caption="right" />
+			<attriboption value="left" caption="left" />
+		</attrib>
+        <attrib name="vdir" type="Enumerated">
+        	<attriboption value="down" caption="down" />
+			<attriboption value="up" caption="up" />
+		</attrib>
+    </attributes>
+     <attribcategories>
+     	<attribgroup name="Required" elements="loop" />
+		<attribgroup name="Optional" elements="cols,rows,innertable_attr,tr_attr,td_attr,trailpad,hdir,vdir" />
+	</attribcategories>
+</tag>
+

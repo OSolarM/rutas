@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>SmartyDWT: variable</title>
+<script language="javascript">
+function isDOMRequired ()
+{
+	return true;
+}
+
+function objectTag ()
+{
+	var startTag = "{$";
+	var endTag = "}";
+	var dom = dw.getDocumentDOM ();
+	dom.source.wrapSelection (startTag, endTag);
+	dom.synchronizeDocument();
+	return "";
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

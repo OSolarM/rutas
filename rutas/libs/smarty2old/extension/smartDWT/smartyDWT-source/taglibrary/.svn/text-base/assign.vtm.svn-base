@@ -1,0 +1,10 @@
+<tag name="assign" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="var" />
+        <attrib name="value />
+    </attributes>
+    <attribcategories>
+		<attribgroup name="Required" elements="var,value" />
+	</attribcategories>
+</tag>

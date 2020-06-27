@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>SmartyDWT: comment</title>
+<script language="javascript">
+function isDOMRequired ()
+{
+	return true;
+}
+
+function objectTag ()
+{
+	var startTag = "<?smarty:* ";
+	var endTag = " *?>";
+	var dom = dw.getDocumentDOM ();
+	dom.source.wrapSelection (startTag, endTag);
+	dom.synchronizeDocument();
+	return "";
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?php
+/**
+ * Smarty plugin
+ * @package Smarty
+ * @subpackage plugins
+ */
+
+
+/**
+ * Smarty {input} function plugin
+ *
+ * Type:     function<br>
+ * Name:     eval<br>
+ * Purpose:  generate an html input field
+ * @author Osciel Solar
+ * @param array
+ * @param Smarty
+ */
+function smarty_function_input($params, &$smarty)
+{
+
+    if (!isset($params['name'])) {
+        $smarty->trigger_error("input: falta el parámetro 'name'.");
+        return;
+    }
+
+    if($params['name'] == '') {
+        $smarty->trigger_error("input: el parámetro 'name' debe contener un valor.");
+        return;
+    }
+    
+    $name=$params["name"];
+    $value="";
+    $size="10";
+    $readonly=false;
+    $class="";
+            
+    //Si la variable, $name, había sido asignada,
+    //recupero su valor
+    if (isset($smarty->_tpl_vars[$name])) 
+       $value = $smarty->_tpl_vars[$name];
+    else if (isset($params['value']))     
+       $value = $params['value'];
+    
+    if (isset($params['size']))      $size = $params['size'];    
+    
+    $maxlength = $size;
+    
+    if (isset($params['maxlength'])) $maxlength = $params['maxlength'];    
+    
+    if (isset($params['readonly']))  $readonly  = $params['readonly'];    
+    
+    if (isset($params['class']))     $class     = $params['class'];    
+    
+    if (isset($params['type']))      $type      = $params['type'];    
+    
+    $style="";
+    if (isset($params['style']))     
+       $style = $params['style'];    
+        
+    if (!empty($type))
+       $s = "<input type=\"$type\"";
+    else   
+       $s = "<input type=\"text\"";
+       
+    $s .= " name=\"$name\" id=\"$name\" value=\"$value\" size=\"$size\" maxlength=\"$maxlength\"";
+    
+    if (!empty($class)) 
+       $s .=" class=\"$class\"";
+       
+    if (!empty($style)) 
+       $s .=" style=\"$style\"";
+       
+    if ($readonly=="true") $s .=" readonly";  
+       
+       
+    $s .= ">";
+    
+    if (isset($smarty->_tpl_vars["msg_".$name])) 
+       $value = $smarty->_tpl_vars["msg_".$name];
+    else  
+       $value = "";
+
+    $s .= "<font color=\"red\"><label id=\"msg_$name\">$value</label></font>";
+
+    return $s;
+}
+?>

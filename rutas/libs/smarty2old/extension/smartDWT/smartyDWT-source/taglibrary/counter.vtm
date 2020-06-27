@@ -1,0 +1,20 @@
+<tag name="config_load" endtag="no" tagtype="empty" casesensitive="yes">
+    <tagformat nlbeforetag="0" nlaftertag="0" />
+    <attributes>
+        <attrib name="name" />
+        <attrib name="start" />
+        <attrib name="skip" />
+        <attrib name="direction" type="Enumerated">
+			<attriboption value="up" caption="up" />
+			<attriboption value="down" caption="down" />
+		</attrib>
+        <attrib name="print" type="Enumerated">
+			<attriboption value="false" caption="false" />
+			<attriboption value="true" caption="true" />
+		</attrib>
+        <attrib name="assign" />
+    </attributes>
+    <attribcategories>
+		<attribgroup name="Optional" elements="name,start,skip,direction,print,assign" />
+	</attribcategories>
+</tag>
